@@ -83,7 +83,7 @@
  * animation bounce-top
  * ----------------------------------------
  */
- @-webkit-keyframes bounce-top {
+@-webkit-keyframes bounce-top {
   0% {
     -webkit-transform: translateY(-45px);
             transform: translateY(-45px);
@@ -187,6 +187,8 @@
     opacity: 1;
   }
 }
+
+
 
 
 

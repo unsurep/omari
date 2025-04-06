@@ -21,7 +21,7 @@ const Navbar=()=>{
                 <ul className="flex items-center gap-10">
                     <li className="hvr-underline-reveal cursor-pointer hover:font-bold">Home</li>
                     <li className="hvr-underline-reveal cursor-pointer hover:font-bold">About</li>
-                    <li className="hvr-underline-reveal cursor-pointer hover:font-bold">Products</li>
+                    <li className="hvr-underline-reveal cursor-pointer hover:font-bold">Services</li>
                     <li className="hvr-underline-reveal cursor-pointer hover:font-bold">Blog</li>
                     <li className="hvr-underline-reveal cursor-pointer hover:font-bold">Contact</li>
                 </ul>
