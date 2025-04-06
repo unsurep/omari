@@ -12,7 +12,7 @@ const Navbar=()=>{
             <nav className="font-inter hidden lg:flex items-center justify-between px-[1rem] md:px-[3rem]  shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] bg-white w-full z-50 fixed">
                 <Link href='/' className=" font-bold py-3">
                     <div>
-                        <Image src='/image/logo2bg.png' width={100} height={100} alt='omari premium water logo' />
+                        <Image src='/image/newlogobg.png' width={100} height={100} alt='omari premium water logo' />
                     </div>
 
                     <h1>Omari Premium Water</h1>

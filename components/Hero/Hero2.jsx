@@ -46,7 +46,7 @@ const Hero2 = () => {
         <div className='py-12'>
           <h1 className='text-center text-znic-600 font-lato'>What's inside</h1>
           <div className='flex items-center justify-center gap-5 py-5'>
-            <Image src='/image/linebg.png' width={100} height={100} alt='image' className=''/>
+            <Image src='/image/linebg.png' width={100} height={100} alt='image'/>
             <h1 className='text-cyan-600 text-3xl font-bold tracking-[5px] font-lato'>Mineral Composition</h1>
           </div>
 
@@ -119,10 +119,10 @@ const Hero2 = () => {
             </div>
           </div>
         </div>
+      </div>
 
-
-        {/* blue bg */}
-        <div className='flex items-center justify-between text-white bg-no-repeat bg-cover h-[50vh]' style={{ backgroundImage: "url('/image/wave.svg')"}}>
+      {/* blue WAVE bg */}
+      <div className='flex items-center px-[1rem] md:px-[3rem] justify-between text-white bg-no-repeat bg-cover h-[50vh]' style={{ backgroundImage: "url('/image/wave.svg')"}}>
           {/* 1 */}
           <div>
             <Image src='/image/b1.png' width={100} height={100} alt='image'/>
@@ -144,13 +144,6 @@ const Hero2 = () => {
             <Image src='/image/b4.png' width={100} height={100} alt='image'/>
             <p className='text-2xl font-bold pt-4'>Quality certificates</p>
           </div>
-        </div>
-
-
-
-
-
-
       </div>
     </>
   )
