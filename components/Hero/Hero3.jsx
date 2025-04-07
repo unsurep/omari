@@ -108,7 +108,7 @@ const Hero3 = () => {
               {/* 3 */}
               <div className='flex flex-col items-center justify-center gap-3 hover:bg-zinc-100 p-4 rounded-lg'>
                 <div>
-                  <Image src='/image/2lbg.png' width={200} height={200} alt='image' className='bg-transparent'/>
+                  <Image src='/image/2Lbg.png' width={200} height={200} alt='image' className='bg-transparent'/>
                 </div>
                 <div className='text-cyan-500 font-bold text-2xl'>N0.00</div>
                 
@@ -122,7 +122,7 @@ const Hero3 = () => {
               {/* 4 */}
               <div className='flex flex-col items-center justify-center gap-3 hover:bg-zinc-100 p-4 rounded-lg'>
                 <div>
-                  <Image src='/image/2lbg.png' width={200} height={200} alt='image' className='bg-transparent'/>
+                  <Image src='/image/2Lbg.png' width={200} height={200} alt='image' className='bg-transparent'/>
                 </div>
                 <div className='text-cyan-500 font-bold text-2xl'>N0.00</div>
                 
