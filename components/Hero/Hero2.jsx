@@ -1,5 +1,8 @@
+'use client'
+
 import React from 'react'
 import Image from 'next/image'
+import { motion } from "motion/react"
 
 const Hero2 = () => {
   return (
@@ -35,7 +38,7 @@ const Hero2 = () => {
         </div>
 
         {/* Read More */}
-        <div className='pt-8'>
+        <div className='pt-8 flex items-center justify-center'>
         <button type="submit" className="relative inline-block text-lg group mt-5 lg:mt-0 shake cursor-pointer">
           <span className="relative z-10 block px-5 py-2.5 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-black">
           <span className="absolute inset-0 w-full h-full px-5 py-3 rounded-lg bg-cyan-600"></span>
@@ -95,21 +98,62 @@ const Hero2 = () => {
               </div>
             </div>
 
+            
+
 
 
             {/* 2 image  */}
             <div className='flex flex-col justify-center items-center'>
-              <Image src='/image/cway.png' width={200} height={200} alt='image' className=''/>
+              <div>
+                <Image src='/image/cway.png' width={200} height={200} alt='image' className=''/>
+              </div>
 
               {/* for big screen lg: */}
-              <Image src='/image/bottled.png' width={120} height={120} alt='image' className='absolute top-[7rem] right-[37rem] hidden lg:flex'/>
+              <motion.div
+                animate={{
+                  y: [0, -10, 0],
+               }}
+
+               transition={{
+                duration: 2,
+                repeat: Infinity,
+                ease: 'easeInOut'
+               }}
+                className='absolute top-[7rem] right-[37rem] hidden lg:flex'>
+                <Image src='/image/bottled.png' width={120} height={120} alt='image' />
+              </motion.div>
 
 
               {/* for tablet screen md: */}
-              <Image src='/image/bottled.png' width={120} height={120} alt='image' className='absolute bottom-[36rem] right-[18rem] hidden md:flex lg:hidden'/>
+              <motion.div 
+                animate={{
+                  y: [0, -10, 0],
+               }}
+
+               transition={{
+                duration: 2,
+                repeat: Infinity,
+                ease: 'easeInOut'
+               }}
+               className='absolute bottom-[36rem] right-[18rem] hidden md:flex lg:hidden'
+                >
+                <Image src='/image/bottled.png' width={120} height={120} alt='image' />
+              </motion.div>
 
               {/* for phone screen */}
-              <Image src='/image/bottled.png' width={120} height={120} alt='image' className='absolute bottom-[36rem] right-[12rem] flex md:hidden lg:hidden'/>
+              <div 
+                animate={{
+                  y: [0, -10, 0],
+               }}
+
+               transition={{
+                duration: 2,
+                repeat: Infinity,
+                ease: 'easeInOut'
+               }}
+                className='absolute bottom-[36rem] right-[12rem] flex md:hidden lg:hidden'>
+                <Image src='/image/bottled.png' width={120} height={120} alt='image' />
+              </div>
 
               {/* <Image src='/image/ice.png' width={100} height={100} alt='image' className='absolute bottom-[5rem] right-[30rem] animate-pulse'/> */}
             </div>
