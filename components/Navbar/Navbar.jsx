@@ -41,7 +41,7 @@ const Navbar=()=>{
             <nav className="font-inter lg:hidden shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] bg-white w-full z-50 fixed px-[1rem] flex items-center justify-between py-3">
                 <Link href='/'>
                     <div>
-                        <Image src='/image/logo2bg.png' width={100} height={100} alt="logo"/>
+                        <Image src='/image/newlogobg.png' width={100} height={100} alt="logo"/>
                     </div>
                 </Link>
 
