@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import TextTransition, { presets } from 'react-text-transition';
+import { useTypewriter, Cursor } from 'react-simple-typewriter'
 
 // AOS
 import AOS from 'aos';
@@ -11,7 +12,7 @@ import 'aos/dist/aos.css';
 
 
 
-const TEXTS = ["Pure & Healthy", "Natural & Pure", "Pure & Healthy","Natural & Pure" ];
+// const TEXTS = ["Pure & Healthy", "Natural & Pure", "Pure & Healthy","Natural & Pure" ];
 
 const Hero1=()=>{
 
@@ -30,30 +31,45 @@ const Hero1=()=>{
   }, [])
 
 
+  const [text] = useTypewriter({
+    words: ['Pure & Healthy', 'Natural & Pure'],
+    loop: 4,
+    onLoopDone: () => console.log(`loop completed after 4 runs.`)
+  })
 
 
-    const [index, setIndex] = useState(0);
-    useEffect(() => {
-        const intervalId = setInterval(() => {
-          setIndex((prev) => (prev + 1) % TEXTS.length);
-        }, 3000);
+
+
+    // const [index, setIndex] = useState(0);
+    // useEffect(() => {
+    //     const intervalId = setInterval(() => {
+    //       setIndex((prev) => (prev + 1) % TEXTS.length);
+    //     }, 3000);
     
-        return () => clearInterval(intervalId);
-      }, []);
+    //     return () => clearInterval(intervalId);
+    //   }, []);
 
 
 
 
     return (
         <section id="hero1" className="py-28 md:py-36 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/image/bg1.avif')"}}>
-            <div className="grid grid-cols-1 md:flex items-center justify-between px-[1rem] lg:px-[3rem] relative">
-                <div data-aos="fade-right" data-aos-duration="2000" className="font-lato flex flex-col gap-2 md:gap-5 items-center justify-center">
-                    <h3 className="text-[10px] md:text-xs bg-white text-cyan-600/90 w-fit px-4 py-1 rounded-full">MINERAL COMPOSITION</h3>
+            <div className="grid grid-cols-2 md:flex items-center justify-between px-[1rem] lg:px-[3rem] relative">
+
+                <div data-aos="fade-right" data-aos-duration="1000" className="font-lato flex flex-col gap-2 md:gap-5 items-center justify-center">
+                    <h3 className="text-[10px] my-8 md:text-xs bg-white text-cyan-600/90 w-fit px-4 py-1 rounded-full">MINERAL COMPOSITION</h3>
                     
-                    <div className="pt-3 lg:flex lg:flex-col lg:gap-2">
-                     <TextTransition springConfig={presets.slow} className="text-2xl md:text-4xl lg:text-5xl font-bold text-zinc-800 ">{TEXTS[index % TEXTS.length]}
-                     </TextTransition>
+                    <div className="pt-3  lg:flex lg:flex-col gap-2 ">
+                     {/* <TextTransition springConfig={presets.slow} className="text-2xl md:text-4xl lg:text-5xl font-bold text-zinc-800 ">{TEXTS[index % TEXTS.length]}
+                     </TextTransition> */}
                      <h1 className="text-2xl md:text-4xl text-zinc-800  lg:text-5xl font-bold">Drinking Water</h1>
+                     <div>
+                        <span className="text-2xl md:text-4xl lg:text-5xl font-bold text-zinc-800 ">{text}<Cursor cursorColor="red "/></span>
+                       
+                     </div>
+
+
+
                     </div>
 
 
@@ -112,12 +128,12 @@ const Hero1=()=>{
                     <Image src='/image/ice.png' width={100} height={100} alt="omari-water-image" className="rounded-lg animate-pulse"/>
                 </div>
 
-                <div className="absolute bottom-0 left-0 animate-pulse">
+                {/* <div className="absolute bottom-0 left-0 animate-pulse">
                     <Image src='/image/ice.png' width={100} height={100} alt="omari-water-image" className="rounded-lg  bounce-top"/>
-                </div>
+                </div> */}
             </div>
 
-            <div className="lg:hidden gap-5 flex items-center justify-center pt-4 md:pt-12">
+            <div className="lg:hidden gap-5 flex items-center justify-center pt-12">
                 <button className="py-1 border border-black px-4 bg-cyan-400 text-white font-lato rounded-full">About Us</button>
                 <button className="py-1 px-4 bg-white border border-black font-lato rounded-full">Contact Us</button>
             </div>
