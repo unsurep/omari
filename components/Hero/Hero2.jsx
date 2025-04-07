@@ -141,7 +141,7 @@ const Hero2 = () => {
               </motion.div>
 
               {/* for phone screen */}
-              <div 
+              <motion.div 
                 animate={{
                   y: [0, -10, 0],
                }}
@@ -153,7 +153,7 @@ const Hero2 = () => {
                }}
                 className='absolute bottom-[36rem] right-[12rem] flex md:hidden lg:hidden'>
                 <Image src='/image/bottled.png' width={120} height={120} alt='image' />
-              </div>
+              </motion.div>
 
               {/* <Image src='/image/ice.png' width={100} height={100} alt='image' className='absolute bottom-[5rem] right-[30rem] animate-pulse'/> */}
             </div>
